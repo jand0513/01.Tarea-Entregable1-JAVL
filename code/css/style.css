@@ -1,0 +1,575 @@
+/*! HTML5 Boilerplate v9.0.1 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .visually-hidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * The use of `table` rather than `block` is only necessary if using
+ * `::before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+/* ==========================================================================
+   Custom styles for the project
+   ========================================================================== */
+:root {
+  /* Paleta de Colores */
+  --primary-color: #1F4B8E;       /* Azul principal para botones y acentos */
+  --secondary-color: #E6F5F3;     /* Verde menta claro para las tarjetas de testimonio */
+  --dark-text-color: #1E2A3B;     /* Color de texto oscuro para títulos */
+  --light-text-color: #6a737d;    /* Color de texto más claro para párrafos */
+  --background-color: #FFFFFF;    /* Fondo principal blanco */
+  --white-color: #FFFFFF;         /* Color blanco puro */
+  --border-radius-md: 0.75rem;       /* Borde redondeado mediano (12px = 0.75rem) */
+  --border-radius-sm: 0.5rem;        /* Borde redondeado pequeño (8px = 0.5rem) */
+
+  /* Tipografía */
+  --font-primary: 'Poppins', sans-serif; /* Familia de fuente principal */
+  --h1-size: 3.5rem;               /* Tamaño para el título principal (h1) */
+  --h3-size: 1.75rem;              /* Tamaño para títulos de sección (h3) */
+  --p-size: 1rem;                  /* Tamaño para párrafos */
+  --small-text-size: 0.9rem;       /* Tamaño para texto pequeño (citas) */
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  /* Variables de espacio */
+  --border-radius-md: 0.75rem;       /* 12px = 0.75rem */
+  --border-radius-sm: 0.5rem;        /* 8px = 0.5rem */
+}
+
+/* ==========================================================================
+   2. ESTILOS GENERALES Y RESET
+   ========================================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-primary);
+  color: var(--dark-text-color);
+  background-color: var(--background-color);
+  line-height: 1.6;
+  /* Múltiples backgrounds: primero la imagen, luego el gradiente de colores */
+  background-image: 
+    url('/img/woman.svg'),
+    linear-gradient(to right, white 0%, white 60%, #A9D6CB 60%, #A9D6CB 100%);
+  background-size: 
+    75rem auto,   /* Tamaño de la imagen (1200px = 75rem) */
+    100% 40rem;    /* El gradiente: 100% ancho x 40rem altura */
+  background-position: 
+    +70% center, /* Posición de la imagen más centrada */
+    left top;     /* Posición del gradiente */
+  background-repeat: 
+    no-repeat,    /* La imagen no se repite */
+    no-repeat;    /* El gradiente no se repite */
+  background-attachment: 
+    scroll,       /* La imagen se mueve con el scroll */
+    scroll;        /* El gradiente permanece fijo */
+}
+
+.container{
+  max-width: 75rem; /* 1200px = 75rem */
+  margin: 0 auto;
+  padding: 0 1.25rem; /* 20px = 1.25rem */
+  height: fit-content; /* Permite que el contenedor se ajuste al contenido */
+}
+
+/* ==========================================================================
+   3. HEADER Y NAVEGACIÓN
+   ========================================================================== */
+
+.main-header {
+  padding: 1.5rem 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 75rem; /* 1200px = 75rem */
+  margin: 0 auto;
+  padding: 0 1.25rem; /* 20px = 1.25rem */
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: var(--font-weight-bold);
+  text-decoration: none;
+  color: var(--dark-text-color); /* Color por defecto para "Glow" */
+}
+
+.logo .logo-queen {
+  color: #A9D6CB; /* Color aqua/cyan para "Queen" */
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: var(--light-text-color);
+  font-weight: var(--font-weight-medium);
+  transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: var(--primary-color);
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-right .icon-link {
+  font-size: 1.2rem;
+  color: var(--dark-text-color);
+}
+/* ==========================================================================
+   4. BOTONES
+   ========================================================================== */
+.btn {
+  padding: 0.75rem 1.5rem; /* 12px 24px = 0.75rem 1.5rem */
+  border-radius: var(--border-radius-sm);
+  text-decoration: none;
+  font-weight: var(--font-weight-medium);
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--dark-text-color);
+}
+
+.btn-video {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--dark-text-color);
+  font-weight: var(--font-weight-medium);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.btn-video i {
+  color: var(--primary-color);
+  font-size: 2rem;
+}
+
+/* ==========================================================================
+   5. HERO SECTION
+   ========================================================================== */
+.hero-section {
+  position: relative;
+  padding-bottom: 2rem;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+/* El contenido de la sección hero está en el container */
+.hero-section .container {
+  display: grid;
+  grid-template-columns: 1fr 21.875rem; /* 350px = 21.875rem */
+  grid-template-rows: auto auto;
+  gap: 2rem;
+  padding-top: 2rem;
+  position: relative;
+  width: 100%;
+  max-width: 75rem; /* 1200px = 75rem */
+  margin: 0 auto;
+  height: 70vh;
+}
+
+.hero-content {
+  grid-column: 1;
+  grid-row: 1;
+  color: var(--dark-text-color);
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  color: var(--dark-text-color);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  max-width: 31.25rem; /* 500px = 31.25rem */
+}
+
+.hero-content p {
+  font-size: var(--p-size);
+  margin-bottom: 2.5rem;
+  max-width: 26.25rem; /* 420px = 26.25rem */
+  color: var(--light-text-color);
+}
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* ==========================================================================
+   6. TESTIMONIALS
+   ========================================================================== */
+.testimonials {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25rem; /* 400px = 25rem */
+  height: 100vh;
+  z-index: 2;
+  pointer-events: none; /* Permite que los clicks pasen a través si es necesario */
+}
+
+.testimonial-card {
+  background-color: rgba(255, 255, 255, 0.6); /* Más transparente */
+  padding: 1.2rem;
+  border-radius: var(--border-radius-md);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(15px);
+  position: absolute;
+  width: 21.875rem; /* 350px = 21.875rem */
+  pointer-events: auto; /* Restaura los clicks en las tarjetas */
+}
+
+/* Primera tarjeta - posición superior derecha */
+.testimonial-card:first-child {
+  top: 9.375rem; /* 150px = 9.375rem */
+  right: 1.25rem; /* 20px = 1.25rem */
+  
+}
+
+/* Segunda tarjeta - posición inferior derecha, más desplazada */
+.testimonial-card:last-child {
+  top: 25rem; /* 400px = 25rem */
+  right: 6.25rem; /* 100px = 6.25rem */
+  
+}
+
+.testimonial-card blockquote {
+  font-style: italic;
+  color: var(--dark-text-color);
+  border-left: 3px solid var(--primary-color);
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.testimonial-card cite {
+  font-style: normal;
+  font-weight: var(--font-weight-bold);
+  color: var(--dark-text-color);
+  font-size: 0.8rem;
+}
+
+/* ==========================================================================
+   7. Features Section
+   ========================================================================== */
+.features-section {
+  position: absolute;
+  bottom: -3.125rem; /* -50px = -3.125rem */
+  left: 7.5rem; /* 120px = 7.5rem */
+  
+  z-index: 10;  
+}
+
+.features-section .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;  
+  padding: 1.5rem 2rem;
+  border-radius: var(--border-radius-md);
+  box-shadow: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.15); /* 0 10px 30px */
+  background-color: white;
+  width: 28.125rem; /* 450px = 28.125rem */
+  gap: 2rem;
+  
+  height: 12.5rem; /* 200px = 12.5rem */
+}
+
+.feature-item {
+  text-align: center;
+  flex: 1;
+}
+
+.feature-item img {
+  height: 2.5rem; /* 40px = 2.5rem */
+  width: 2.5rem; /* 40px = 2.5rem */
+  margin-bottom: 0.8rem;
+  background-color: #A9D6CB;
+  padding: 0.5rem; /* 8px = 0.5rem */
+  border-radius: 50%;
+}
+
+.feature-item h3 {
+  font-size: 1.8rem;
+  color: var(--dark-text-color);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 0.3rem;
+}
+
+.feature-item p {
+  font-size: 0.85rem;
+  color: var(--light-text-color);
+  line-height: 1.3;
+}
+
