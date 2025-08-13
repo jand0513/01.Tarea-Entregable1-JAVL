@@ -257,7 +257,7 @@ textarea {
   --background-color: #FFFFFF;    /* Fondo principal blanco */
   --white-color: #FFFFFF;         /* Color blanco puro */
   --border-radius-md: 0.75rem;       /* Borde redondeado mediano (12px = 0.75rem) */
-  --border-radius-sm: 0.5rem;        /* Borde redondeado pequeño (8px = 0.5rem) */
+  --border-radius-sm: 2rem;        /* Borde redondeado pequeño (32px = 2rem) */
 
   /* Tipografía */
   --font-primary: 'Poppins', sans-serif; /* Familia de fuente principal */
@@ -272,7 +272,7 @@ textarea {
 
   /* Variables de espacio */
   --border-radius-md: 0.75rem;       /* 12px = 0.75rem */
-  --border-radius-sm: 0.5rem;        /* 8px = 0.5rem */
+  --border-radius-sm: 2rem;        /* 8px = 0.5rem */
 }
 
 /* ==========================================================================
@@ -349,7 +349,7 @@ body::before {
    ========================================================================== */
 
 .main-header {
-  padding: 1.5rem 0;
+  padding: 2.5rem 0;
 }
 
 .navbar {
