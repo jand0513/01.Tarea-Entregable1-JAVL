@@ -581,8 +581,8 @@ body::before {
 }
 
 .feature-item img {
-  height: 2.5rem; /* 40px = 2.5rem */
-  width: 2.5rem; /* 40px = 2.5rem */
+  height: 3.5rem; /* 40px = 2.5rem */
+  width: 3.5rem; /* 40px = 2.5rem */
   margin-bottom: 0.8rem;
   background-color: #A9D6CB;
   padding: 0.5rem; /* 8px = 0.5rem */
